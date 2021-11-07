@@ -783,7 +783,7 @@ jQuery (() => {
 <div class="sourceCode" id="cb35"><pre class="sourceCode numberSource js numberLines lineAnchors"><code class="sourceCode javascript"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">jQuery</span> (() <span class="kw">=&gt;</span> {</span>
 <span id="cb35-2"><a href="#cb35-2"></a> <span class="kw">const</span> none <span class="op">=</span> <span class="kw">async</span> ma <span class="kw">=&gt;</span> {</span>
 <span id="cb35-3"><a href="#cb35-3"></a>  <span class="kw">const</span> set_throw <span class="op">=</span> value <span class="kw">=&gt;</span> delay <span class="kw">=&gt;</span> <span class="bu">event</span> <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Promise</span> ((goto<span class="op">,</span> fail) <span class="kw">=&gt;</span> <span class="pp">setTimeout</span> (() <span class="kw">=&gt;</span> {</span>
-<span id="cb35-4"><a href="#cb35-4"></a>   out <span class="op">=</span> <span class="bu">event</span> (value)<span class="op">;</span></span>
+<span id="cb35-4"><a href="#cb35-4"></a>   <span class="kw">const</span> out <span class="op">=</span> <span class="bu">event</span> (value)<span class="op">;</span></span>
 <span id="cb35-5"><a href="#cb35-5"></a>   <span class="cf">if</span> (out <span class="op">&lt;</span> <span class="dv">0</span>) {</span>
 <span id="cb35-6"><a href="#cb35-6"></a>    <span class="fu">goto</span> (out)<span class="op">;</span></span>
 <span id="cb35-7"><a href="#cb35-7"></a>   } <span class="cf">else</span> {</span>
@@ -805,7 +805,7 @@ jQuery (() => {
 jQuery (() => {
  const none = async ma => {
   const set_throw = value => delay => event => new Promise ((goto, fail) => setTimeout (() => {
-   out = event (value);
+   const out = event (value);
    if (out < 0) {
     goto (out);
    } else {
