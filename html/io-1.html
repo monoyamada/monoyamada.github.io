@@ -13,7 +13,7 @@
 
 <meta name="date" content="2021-11-08">
 
-<title>io-1</title>
+<title>Identity monad</title>
 
 <script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
 
@@ -274,7 +274,7 @@ g[data-mml-node="xypic"] path {
 
 
 <section class="page-header">
-<h1 class="title toc-ignore project-name">io-1</h1>
+<h1 class="title toc-ignore project-name">Identity monad</h1>
 <h4 class="author project-author">monoyamada</h4>
 <h4 class="date project-date">2021-11-08</h4>
 </section>
@@ -325,7 +325,7 @@ span.mod-date{font-size:small}.note{position:relative;margin-top:2em;margin-bott
 <span id="cb3-6"><a href="#cb3-6"></a> <span class="fu">add_1</span> (<span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="fu">print</span> ();</span>
 <span id="cb3-7"><a href="#cb3-7"></a>});</span></code></pre></div>
 <pre><code>[1] 1000</code></pre>
-<p>We expect to print <code>1</code>, but print <code>1000</code> in actual. This is unexpected and unpleasant behavior. To confirm that our expectation is normal, let’s check similar codes in other programming languages.</p>
+<p>We expect to print <code>1</code>, but print <code>1000</code> in actual. This is unexpected and unpleasant behavior. To confirm that our expectation is an ordinal one, let’s check similar codes in other programming languages.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python numberLines lineAnchors"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> none ():</span>
 <span id="cb5-2"><a href="#cb5-2"></a> add <span class="op">=</span> <span class="kw">lambda</span> x: <span class="kw">lambda</span> y: x <span class="op">+</span> y<span class="op">;</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a> a <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
