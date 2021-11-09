@@ -338,11 +338,12 @@ span.mod-date{font-size:small}.note{position:relative;margin-top:2em;margin-bott
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ot">hell_new ::</span> a <span class="ot">-&gt;</span> <span class="dt">Hell</span> a</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>hell_new a ax <span class="ot">=</span> ax a</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ot">hell_add_type_1 ::</span> <span class="dt">Hom</span> a b <span class="ot">-&gt;</span> <span class="dt">Hell</span> a <span class="ot">-&gt;</span> <span class="dt">Hell</span> b</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>hell_add_type_1 ab axx bx <span class="ot">=</span> axx \a <span class="ot">-&gt;</span> bx (ab a)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ot">hell_type_1 ::</span> <span class="dt">Hom</span> a b <span class="ot">-&gt;</span> <span class="dt">Hell</span> a <span class="ot">-&gt;</span> <span class="dt">Hell</span> b</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>hell_type_1 ab axx bx <span class="ot">=</span> axx \a <span class="ot">-&gt;</span> bx (ab a)</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ot">hell_add_type_2 ::</span> <span class="dt">Hom</span> a (<span class="dt">Hell</span> b) <span class="ot">-&gt;</span> <span class="dt">Hell</span> a <span class="ot">-&gt;</span> <span class="dt">Hell</span> b</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>hell_add_type_2 abxx axx bx <span class="ot">=</span> axx \a <span class="ot">-&gt;</span> abxx a bx</span></code></pre></div>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ot">hell_type_2 ::</span> <span class="dt">Hom</span> a (<span class="dt">Hell</span> b) <span class="ot">-&gt;</span> <span class="dt">Hell</span> a <span class="ot">-&gt;</span> <span class="dt">Hell</span> b</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>hell_type_2 abxx axx bx <span class="ot">=</span> axx \a <span class="ot">-&gt;</span> abxx a bx</span></code></pre></div>
+<p>The way to create a hell is only one, i.e. <code>hell_new</code>. On the other hand, there are two ways to grow a hell, i.e. <code>hell_type_1</code> and <code>hell_type_2</code>.</p>
 <p><code>Hell</code> has a significant feature, i.e. it only returns the meaning-less result <code>()</code>. The usefulness of <code>Hell</code> lies only in the side-effect. <code>Hell</code> is a naive imitation of <code>setTimeout</code> of JS.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js numberLines lineAnchors"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">jQuery</span> (() <span class="kw">=&gt;</span> {</span>
 <span id="cb5-2"><a href="#cb5-2"></a> <span class="kw">const</span> dump <span class="op">=</span> text <span class="kw">=&gt;</span> {</span>
@@ -353,11 +354,11 @@ span.mod-date{font-size:small}.note{position:relative;margin-top:2em;margin-bott
 <span id="cb5-7"><a href="#cb5-7"></a>   <span class="kw">this</span><span class="op">.</span><span class="at">callback</span> <span class="op">=</span> ax <span class="kw">=&gt;</span> <span class="fu">ax</span> (a)<span class="op">;</span></span>
 <span id="cb5-8"><a href="#cb5-8"></a>   <span class="kw">this</span><span class="op">.</span><span class="at">msec</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb5-9"><a href="#cb5-9"></a>  }<span class="op">;</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">add_type_1</span> (ab) {</span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">type_1</span> (ab) {</span>
 <span id="cb5-11"><a href="#cb5-11"></a>   <span class="kw">const</span> axx <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">callback</span><span class="op">;</span></span>
 <span id="cb5-12"><a href="#cb5-12"></a>   <span class="kw">this</span><span class="op">.</span><span class="at">callback</span> <span class="op">=</span> bx <span class="kw">=&gt;</span> <span class="fu">axx</span> (a <span class="kw">=&gt;</span> <span class="fu">bx</span> (<span class="fu">ab</span> (a)))<span class="op">;</span></span>
 <span id="cb5-13"><a href="#cb5-13"></a>  }<span class="op">;</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>  <span class="fu">add_type_2</span> (abxx) {</span>
+<span id="cb5-14"><a href="#cb5-14"></a>  <span class="fu">type_2</span> (abxx) {</span>
 <span id="cb5-15"><a href="#cb5-15"></a>   <span class="kw">const</span> axx <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">callback</span><span class="op">;</span></span>
 <span id="cb5-16"><a href="#cb5-16"></a>   <span class="co">// this.callback = bx =&gt; axx (a =&gt; abxx (a) (bx));</span></span>
 <span id="cb5-17"><a href="#cb5-17"></a>   <span class="kw">this</span><span class="op">.</span><span class="at">callback</span> <span class="op">=</span> bx <span class="kw">=&gt;</span> {</span>
@@ -379,8 +380,8 @@ span.mod-date{font-size:small}.note{position:relative;margin-top:2em;margin-bott
 <span id="cb5-33"><a href="#cb5-33"></a> }<span class="op">;</span></span>
 <span id="cb5-34"><a href="#cb5-34"></a> <span class="kw">const</span> hell <span class="op">=</span> <span class="kw">new</span> <span class="fu">Hell</span> (<span class="st">"a"</span>)<span class="op">;</span></span>
 <span id="cb5-35"><a href="#cb5-35"></a> hell<span class="op">.</span><span class="fu">set_sec</span> (<span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb5-36"><a href="#cb5-36"></a> hell<span class="op">.</span><span class="fu">add_type_1</span> (a <span class="kw">=&gt;</span> a <span class="op">+</span> <span class="st">"b"</span>)<span class="op">;</span></span>
-<span id="cb5-37"><a href="#cb5-37"></a> hell<span class="op">.</span><span class="fu">add_type_2</span> (a <span class="kw">=&gt;</span> bx <span class="kw">=&gt;</span> <span class="fu">bx</span> (a <span class="op">+</span> <span class="st">"c"</span>))<span class="op">;</span></span>
+<span id="cb5-36"><a href="#cb5-36"></a> hell<span class="op">.</span><span class="fu">type_1</span> (a <span class="kw">=&gt;</span> a <span class="op">+</span> <span class="st">"b"</span>)<span class="op">;</span></span>
+<span id="cb5-37"><a href="#cb5-37"></a> hell<span class="op">.</span><span class="fu">type_2</span> (a <span class="kw">=&gt;</span> bx <span class="kw">=&gt;</span> <span class="fu">bx</span> (a <span class="op">+</span> <span class="st">"c"</span>))<span class="op">;</span></span>
 <span id="cb5-38"><a href="#cb5-38"></a> hell<span class="op">.</span><span class="fu">go</span> (a <span class="kw">=&gt;</span> <span class="fu">dump</span> (a))<span class="op">;</span></span>
 <span id="cb5-39"><a href="#cb5-39"></a>})<span class="op">;</span></span></code></pre></div>
 <script type="text/javascript">
@@ -393,11 +394,11 @@ jQuery (() => {
    this.callback = ax => ax (a);
    this.msec = 0;
   };
-  add_type_1 (ab) {
+  type_1 (ab) {
    const axx = this.callback;
    this.callback = bx => axx (a => bx (ab (a)));
   };
-  add_type_2 (abxx) {
+  type_2 (abxx) {
    const axx = this.callback;
    // this.callback = bx => axx (a => abxx (a) (bx));
    this.callback = bx => {
@@ -419,8 +420,8 @@ jQuery (() => {
  };
  const hell = new Hell ("a");
  hell.set_sec (1);
- hell.add_type_1 (a => a + "b");
- hell.add_type_2 (a => bx => bx (a + "c"));
+ hell.type_1 (a => a + "b");
+ hell.type_2 (a => bx => bx (a + "c"));
  hell.go (a => dump (a));
 });
 </script>
@@ -524,7 +525,7 @@ By using this <code>hook</code>, we can enhance <code>Js</code> to cache a value
 <span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="kw">instance</span> <span class="dt">Monad</span> <span class="dt">Ks</span> <span class="kw">where</span></span>
 <span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="ot"> (&gt;&gt;=) ::</span> <span class="dt">Ks</span> a <span class="ot">-&gt;</span> <span class="dt">Hom</span> a (<span class="dt">Ks</span> b) <span class="ot">-&gt;</span> <span class="dt">Ks</span> b</span>
 <span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a> <span class="dt">Ks</span> ma <span class="op">&gt;&gt;=</span> amb <span class="ot">=</span> amb <span class="op">$</span> js_get ma</span></code></pre></div>
-<p>Since <code>Ks</code> is isomorphic to <code>Identity</code>, <a href="#add-hs">add-hs</a> is reproduced as follows:</p>
+<p>Since <code>Ks</code> is isomorphic to <code>Identity</code>, <a href="io-1.html#add-hs">add-hs</a> is reproduced as follows:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ot">none ::</span> <span class="dt">Ks</span> <span class="dt">Int</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>none <span class="ot">=</span> <span class="kw">do</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> <span class="kw">let</span> add <span class="ot">=</span> (<span class="op">+</span>)</span>
