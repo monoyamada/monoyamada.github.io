@@ -28,6 +28,7 @@ Geminiによると、計測機器の値段を考慮すると、次の順序で�
 2. 軟X線
 
 計測器の値段は、需要に反比例する形で高くなるようだ。
+
 <blockquote>
 マイクロ波〜ミリ波の機材も高価ですが、実は軟X線の機材はさらに特殊で高額です。
 
@@ -46,8 +47,6 @@ Geminiによると、計測機器の値段を考慮すると、次の順序で�
         理由: 軟X線は空気中で急激に減衰するため、測定には**「高真空環境」**が必要です。装置全体を真空容器に入れる必要があるため、システムの規模が跳ね上がります。
 </blockquote>
 
-5G携帯の影響もあり、マイクロ波〜ミリ波の計測器は、数十万円からスタートするようだ。
-一方、軟X線の計測器は、数百万円からのスタートらしい。
 まずは、数万で手に入る次の計測器を使って測定してみよう。
 
 * [SeeSii Tiny SA Ultra Overview and Demo...a Handy Tool For Ham Radio and Electronics Repair - YouTube](https://www.youtube.com/watch?v=6C24RnYNOWQ)
