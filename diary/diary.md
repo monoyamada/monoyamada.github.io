@@ -11,12 +11,28 @@
 
 ## GM係数管 04:19
 
-少し前に次のGM係数感を買った。
+少し前に次のGM計数管を買った。
  
 * [Amazon.co.jp: Lifebasis Radiation Measuring Instrument, Water Quality Radiation Detector, Nuclear Radiation Detector Measurement, Radiation Measuring Instrument, Radiation Measuring Instrument, X-ray, Beta Ray and : Industrial & Scientific](https://www.amazon.co.jp/dp/B0CZ75GL45/ref=sspa_dk_detail_0?pd_rd_i=B0CZ75GL45&pd_rd_w=ueoK1&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=VDW190AEZ01Z3C6GJH8A&pd_rd_wg=ZtoZm&pd_rd_r=19440979-95cc-41ae-b125-96a45101d785&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1)
  
 今の所、室内では、0.45 μSv/hが最高値になっている。
 数値変化を目で確認する限り、大体、0.1 μSv/hから0.2 μSv/hの間で変動している。
+
+攻撃に使われている電磁波は、体感では、アルミ箔を透過し、0.5mmのステンレス板で遮蔽される。
+体感を信じるならば、軟X線かマイクロ・ミリ波が候補になるそうだ（Gemini）。
+GM計数管での測定結果は、この体感とマッチしている。
+
+Geminiによると、計測機器の値段を考慮すると、次の順序で電磁波を特定するのが良いらしい。
+
+1. マイクロ・ミリ波
+2. 軟X線
+
+計測器の値段は、需要に反比例する形で高くなるようだ。
+5G携帯の影響もあり、マイクロ波〜ミリ波の計測器は、数十万円からスタートするようだ。
+一方、軟X線の計測器は、数百万円からのスタートらしい。
+まずは、数万で手に入る次の計測器を使って測定してみよう。
+
+* [SeeSii Tiny SA Ultra Overview and Demo...a Handy Tool For Ham Radio and Electronics Repair - YouTube](https://www.youtube.com/watch?v=6C24RnYNOWQ)
 
 ## 履歴 04:48
 
